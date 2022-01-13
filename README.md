@@ -25,6 +25,6 @@ Atenção: Assim como com o token, tome cuidado com sua chave de API e blah.
 3. Após finalizar, dê um "node ." e caso esteja tudo certo você receberá uma mensagem de sucesso no console.
 
 ## Personalizar
-O bot está utilizando ! como prefixo por padrão mas caso queira alterar é só entrar em src/Data/config.json e alterar o valor do campo "prefix".
+O bot está utilizando "!" como prefixo por padrão mas caso queira alterar é só entrar em src/Data/config.json e alterar o valor do campo "prefix".
 
 O projeto está utilizando como padrão a cor '#1F0954' ao gerar alguma mensagem embed, você pode alterar isso facilmente alterando o valor do campo "embed_color" em src/Data/config.json. Caso queira cores diferentes pra cada embed, terá que alterá-los individualmente.
