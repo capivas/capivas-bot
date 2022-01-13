@@ -1,7 +1,8 @@
 const Command = require('../Structures/Command.js');
+const Queue = require('../Structures/Queue.js');
 const {MessageEmbed} = require("discord.js");
 const queue = require('../index.js').queue;
-const Queue = require('../Structures/Queue.js');
+const config = require('../Data/config.json');
 
 module.exports = new Command({
     name: 'queue',
@@ -18,7 +19,7 @@ module.exports = new Command({
             return message.reply('A fila está vazia.');
         }
 
-        const embed = new MessageEmbed().setColor('#1F0954').setTitle('Song Queue');
+        const embed = new MessageEmbed().setColor(`${config.embed_color}`).setTitle('Song Queue');
 
         for(let song of server_queue.songs) {
             embed.addField(`**${song.title}** (${song.author})`, `${song.url}`)
