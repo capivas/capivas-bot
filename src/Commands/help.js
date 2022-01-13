@@ -1,5 +1,6 @@
 const Command = require('../Structures/Command.js');
 const {MessageEmbed} = require("discord.js");
+const config = require('../Data/config.json');
 
 module.exports = new Command({
     name: 'help',
@@ -8,7 +9,7 @@ module.exports = new Command({
 
     async run(message, args, client) {
         const channel = message.channel;
-        const embed = new MessageEmbed().setColor('#1F0954').setTitle('Help');
+        const embed = new MessageEmbed().setColor(`${config.embed_color}`).setTitle('Help');
 
         for(let command of client.commands) {
             let name = `${client.prefix}${command[1].name}`;
