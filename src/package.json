@@ -1,0 +1,23 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "Bot de música para o discord.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "capivas",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@discordjs/voice": "^0.7.5",
+    "discord.js": "^13.5.1",
+    "dotenv": "^10.0.0",
+    "ffmpeg-static": "^4.4.1",
+    "fs": "^0.0.1-security",
+    "libsodium-wrappers": "^0.7.9",
+    "node": "^16.13.1",
+    "youtube-api": "^3.0.1",
+    "ytdl-core": "^4.10.0"
+  }
+}
