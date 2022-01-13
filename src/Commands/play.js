@@ -10,7 +10,6 @@ const Song = require('../Structures/Song.js');
 const Queue = require("../Structures/Queue.js");
 
 const queue = require("../index.js").queue;
-//const youTube = require("../index.js").youTube;
 
 module.exports = new Command({
 	name: 'play',
@@ -71,7 +70,7 @@ module.exports = new Command({
 			}
 		} else {
 			server_queue.songs.push(song);
-			let embed = new MessageEmbed().setColor('#1F0954').setTitle('Música adicionada à fila!').addField(`**${song.title}**`, song.url);
+			let embed = new MessageEmbed().setColor(`${config.embed_color}`).setTitle('Música adicionada à fila!').addField(`**${song.title}**`, song.url);
 			return message.channel.send({embeds: [embed]});
         }
 	}
@@ -129,7 +128,7 @@ const video_player = async (guild, song) => {
 
 	await play(player, resource, song_queue.connection);
 
-	const embed = new MessageEmbed().setColor('#1F0954').setTitle('Tocando agora');
+	const embed = new MessageEmbed().setColor(`${config.embed_color}`).setTitle('Tocando agora');
 	await now_playing(song_queue, embed);
 }
 
